@@ -852,9 +852,6 @@ function add_img_canvas(imgele, type, w, h) {
 
 			}
 
-
-
-
 			el.forEach(item => {
 
 
@@ -1083,9 +1080,7 @@ $(document).on('click', "#deleteBtn", function () {
 			canvas.remove(canvas.getActiveObject());
 			deleteBtn.style.display = 'none';
 
-
 			/*
-
 			// console.log("删除的是图案");
 			customPic = null;
 			//删掉图案后显示默认纯色
@@ -1102,8 +1097,7 @@ $(document).on('click', "#deleteBtn", function () {
 			add_img_canvas(canvas1.toDataURL());
 			//取消图案选择
 			$(".picListBox ul li").siblings().removeClass("sltPic");
-			$(".picListBox ul li").siblings().addClass("noSltPic");
-*/
+			$(".picListBox ul li").siblings().addClass("noSltPic");*/
 		} else {
 			canvas.remove(canvas.getActiveObject());
 			deleteBtn.style.display = 'none';
