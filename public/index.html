@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>图片编辑</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0,initial-scale=1, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/yan1.css">
+	<link rel="stylesheet" href="css/yan2.css?v=1.2" />
+	<script src="js/libs/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<!-- 图片编辑器 -->
+	<div class="editor" style="position: relative;">
+		<img src="" class="logoBox">
+		<img src="" class="maskTop">
+		<canvas id="Canvas" width="" height=""></canvas>
+
+		<img src="images/close.png" id="deleteBtn"
+			style="position:absolute;top: 0px;left: 0px;cursor:pointer;20px;height:20px;display: none;" />
+	</div>
+
+	<!-- 默认图片  -->
+	<div class="picListBox">
+		<ul id="picList">
+
+		</ul>
+		<div class="arrow_l2"></div>
+		<div class="arrow_r2"></div>
+	</div>
+
+	<div class="bottomBox"></div>
+	<!-- 设置栏 -->
+	<div class="setBox">
+		<div class="flex1" id="uploadPic">
+			<div class="ico"
+				style="background: #fff url(images/icon/upload.png) center center no-repeat;background-size: cover;">
+			</div>
+			上传图案
+
+		</div>
+		<input type="file" id="upimg" accept="image/*" style="display: none">
+		<div class="flex1" id="addText">
+			<div class="ico"
+				style="background: #fff url(images/icon/wz.png) center center no-repeat;background-size: cover;">
+			</div>添加文字
+		</div>
+		<div class="flex2"></div>
+		<div class="flex1" id="maskColor">
+			<div class="ico" id="colorIco"></div>口罩颜色
+		</div>
+		<div class="flex1" id="maskType">
+			<div class="ico"
+				style="background: #fff url(images/icon/kz.png) center center no-repeat;background-size: cover;">
+			</div>口罩型号
+		</div>
+	</div>
+
+	<!-- 3D预览 -->
+	<div class="view3d">
+
+	</div>
+	<!-- 上传框 -->
+	<div class="maskGray" id="upLoadBox">
+		<div class="closeBtn" id="closeUplod">x</div>
+	</div>
+
+
+	<!-- 文本框 -->
+	<div class="maskGray" id="textMask">
+		<div class="closeBtn" id="closeText">x</div>
+		<div class="textBox">
+			<input id="picText" table-layout="fixed" type="text" placeholder="请录入文字" on />
+
+			<!-- begin  -->
+			<div class="color_shil" id="textShil">
+				<!--重要，不能删除-->
+				<p id="picker"></p>
+				<!-- <input id="color" type="text" value="" /> -->
+
+			</div>
+			<!-- end -->
+			<div class="textBtn" id="sendText">确定</div>
+		</div>
+		<div class="fontBox">
+			<select class="sltFont">
+				<option value="FangZhengKaiTiJianTi-1">方正楷体</option>
+				<option value="YangRenDongZhuShiTi-Regular-2">杨任东竹石体</option>
+				<option value="ceymW01">仓耳与墨</option>
+				<option value="mkwtyt12">猫啃网糖圆体</option>
+				<option value="Muyao-Softbrush-2">沐瑶软笔手写体</option>
+				<option value="YanShiQiuHongKai-2">演示秋鸿楷</option>
+			</select>
+		</div>
+
+	</div>
+	<!-- 口罩选择 -->
+	<div class="maskLong" id="maskSlt">
+
+		<div class="closeBtn" id="closeSlt">x</div>
+		<div class="maskBox">
+		</div>
+
+	</div>
+
+	<!-- 口罩颜色 -->
+	<div class="maskGray" id="maskColorSlt">
+		<div class="closeBtn" id="closeColorSlt">x</div>
+		<div class="textBox">
+			<div class="colorTitle">口罩色值:</div>
+			<input id="colorValText" type="text" on />
+			<!-- begin  -->
+			<div class="color_shil">
+				<!--重要，不能删除-->
+				<p id="picker2"></p>
+				<!-- <input id="color" type="text" value="" /> -->
+
+			</div>
+			<!-- end -->
+			<div class="textBtn" id="sendColor">确定</div>
+	</div>
+
+		<script type="text/javascript" src="js/fabric.js?v=2.5"></script>
+		<script type='text/javascript' src='js/utils.js'></script>
+		<script type='text/javascript' src='js/yan.js'></script>
+</body>
+
+</html>
